@@ -10,17 +10,17 @@ using System.Windows.Forms;
 
 namespace Chatbot_Application
 {
-    public partial class Tableau : Form
+    public partial class PowerBI : Form
     {
-        public Tableau()
+        public PowerBI()
         {
             InitializeComponent();
         }
 
-        private void Tableau_Load(object sender, EventArgs e)
+        private void PowerBI_Load(object sender, EventArgs e)
         {
             webBrowser1.ScriptErrorsSuppressed = true;
-            webBrowser1.Navigate("www.tableau.com");
+            webBrowser1.Navigate("www.PowerBI.com");
         }
     }
 }

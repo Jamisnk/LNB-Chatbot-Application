@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace Chatbot_Application
 {
@@ -78,10 +80,18 @@ namespace Chatbot_Application
 
         private void employeeBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.employeeBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.ChatbotDBDataSet1);
+            if(empID == "1")
+            {
+                this.Validate();
+                this.employeeBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.ChatbotDBDataSet1);
+                MessageBox.Show("Employee Successfully Saved");
 
+            }
+            else
+            {
+                MessageBox.Show("You do not have permission to save new employees.", "Permission Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void Chatbot_Load(object sender, EventArgs e)
@@ -93,8 +103,8 @@ namespace Chatbot_Application
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            Chatbot_Application.Tableau form = new Chatbot_Application.Tableau();
-            form.Show();
+            string filePath = @"C:\Users\jamis\Downloads\PowerBI Visualization.pbix";
+            Process.Start(filePath);
         }
     }
 }

@@ -93,12 +93,15 @@ namespace Chatbot_Application
                                     string x = table.Rows[0][0].ToString();
                                     readerReturnValue2.Close();
 
-                                    string query3 = "INSERT INTO Request (RequestDate, Approved, Reason, ShiftID) VALUES (@RequestDate, @Approved, @Reason, @ShiftID)";
+                                    string query3 = "INSERT INTO Request (Request_Time, RequestDate, Request_Type, Reason, ShiftID, EmployeeID, Approved) VALUES (@RequestTime, @RequestDate, @RequestType, @Reason, @ShiftID, @EmployeeID, @Approved)";
                                     SqlCommand cmd3 = new SqlCommand(query3, conn);
-                                    cmd3.Parameters.AddWithValue("@RequestDate", monthCalendar1.TodayDate.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture));
+                                    cmd3.Parameters.AddWithValue("@RequestDate", monthCalendar1.SelectionRange.Start.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture));
                                     cmd3.Parameters.AddWithValue("@Approved", 1);
                                     cmd3.Parameters.AddWithValue("@Reason", textBox2.Text);
                                     cmd3.Parameters.AddWithValue("@ShiftID", x);
+                                    cmd3.Parameters.AddWithValue("@RequestTime", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                                    cmd3.Parameters.AddWithValue("@RequestType", "Cover Shift"); 
+                                    cmd3.Parameters.AddWithValue("@EmployeeID", empID);
                                     cmd3.ExecuteNonQuery();
 
                                     string query4 = "UPDATE Shift SET Worked = @Worked, EmployeeID = @EmpID WHERE ShiftID = @ShiftID";

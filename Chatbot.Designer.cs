@@ -35,9 +35,9 @@ namespace Chatbot_Application
             System.Windows.Forms.Label last_NameLabel;
             System.Windows.Forms.Label dOBLabel;
             System.Windows.Forms.Label available_PTO_HrsLabel;
-            System.Windows.Forms.Label usernameLabel;
-            System.Windows.Forms.Label passwordLabel;
             System.Windows.Forms.Label departmentIDLabel;
+            System.Windows.Forms.Label passwordLabel;
+            System.Windows.Forms.Label usernameLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Chatbot));
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -76,9 +76,9 @@ namespace Chatbot_Application
             last_NameLabel = new System.Windows.Forms.Label();
             dOBLabel = new System.Windows.Forms.Label();
             available_PTO_HrsLabel = new System.Windows.Forms.Label();
-            usernameLabel = new System.Windows.Forms.Label();
-            passwordLabel = new System.Windows.Forms.Label();
             departmentIDLabel = new System.Windows.Forms.Label();
+            passwordLabel = new System.Windows.Forms.Label();
+            usernameLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
@@ -128,18 +128,18 @@ namespace Chatbot_Application
             available_PTO_HrsLabel.AutoSize = true;
             available_PTO_HrsLabel.Location = new System.Drawing.Point(31, 195);
             available_PTO_HrsLabel.Name = "available_PTO_HrsLabel";
-            available_PTO_HrsLabel.Size = new System.Drawing.Size(156, 18);
+            available_PTO_HrsLabel.Size = new System.Drawing.Size(124, 18);
             available_PTO_HrsLabel.TabIndex = 8;
-            available_PTO_HrsLabel.Text = "Available PTO Hrs:";
+            available_PTO_HrsLabel.Text = "Available PTO:";
             // 
-            // usernameLabel
+            // departmentIDLabel
             // 
-            usernameLabel.AutoSize = true;
-            usernameLabel.Location = new System.Drawing.Point(31, 230);
-            usernameLabel.Name = "usernameLabel";
-            usernameLabel.Size = new System.Drawing.Size(93, 18);
-            usernameLabel.TabIndex = 10;
-            usernameLabel.Text = "username:";
+            departmentIDLabel.AutoSize = true;
+            departmentIDLabel.Location = new System.Drawing.Point(31, 300);
+            departmentIDLabel.Name = "departmentIDLabel";
+            departmentIDLabel.Size = new System.Drawing.Size(129, 18);
+            departmentIDLabel.TabIndex = 14;
+            departmentIDLabel.Text = "Department ID:";
             // 
             // passwordLabel
             // 
@@ -150,14 +150,14 @@ namespace Chatbot_Application
             passwordLabel.TabIndex = 12;
             passwordLabel.Text = "password:";
             // 
-            // departmentIDLabel
+            // usernameLabel
             // 
-            departmentIDLabel.AutoSize = true;
-            departmentIDLabel.Location = new System.Drawing.Point(31, 300);
-            departmentIDLabel.Name = "departmentIDLabel";
-            departmentIDLabel.Size = new System.Drawing.Size(129, 18);
-            departmentIDLabel.TabIndex = 14;
-            departmentIDLabel.Text = "Department ID:";
+            usernameLabel.AutoSize = true;
+            usernameLabel.Location = new System.Drawing.Point(31, 230);
+            usernameLabel.Name = "usernameLabel";
+            usernameLabel.Size = new System.Drawing.Size(93, 18);
+            usernameLabel.TabIndex = 10;
+            usernameLabel.Text = "username:";
             // 
             // button1
             // 
@@ -318,6 +318,7 @@ namespace Chatbot_Application
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(225, 26);
             this.passwordTextBox.TabIndex = 13;
+            this.passwordTextBox.UseSystemPasswordChar = true;
             // 
             // departmentIDTextBox
             // 
@@ -479,7 +480,7 @@ namespace Chatbot_Application
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(182, 50);
             this.button2.TabIndex = 16;
-            this.button2.Text = "Tableau Visualization";
+            this.button2.Text = "PowerBI Visualization";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
@@ -542,11 +543,11 @@ namespace Chatbot_Application
         private System.Windows.Forms.TextBox last_NameTextBox;
         private System.Windows.Forms.DateTimePicker dOBDateTimePicker;
         private System.Windows.Forms.TextBox available_PTO_HrsTextBox;
-        private System.Windows.Forms.TextBox usernameTextBox;
-        private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.TextBox departmentIDTextBox;
         public System.Windows.Forms.TextBox employeeIDTextBox;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox usernameTextBox;
+        private System.Windows.Forms.TextBox passwordTextBox;
     }
 }
 

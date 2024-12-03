@@ -1,7 +1,7 @@
 ﻿
 namespace Chatbot_Application
 {
-    partial class Tableau
+    partial class PowerBI
     {
         /// <summary>
         /// Required designer variable.
@@ -41,15 +41,15 @@ namespace Chatbot_Application
             this.webBrowser1.Size = new System.Drawing.Size(1083, 613);
             this.webBrowser1.TabIndex = 0;
             // 
-            // Tableau
+            // PowerBI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1083, 613);
             this.Controls.Add(this.webBrowser1);
-            this.Name = "Tableau";
-            this.Text = "Tableau";
-            this.Load += new System.EventHandler(this.Tableau_Load);
+            this.Name = "PowerBI";
+            this.Text = "PowerBI";
+            this.Load += new System.EventHandler(this.PowerBI_Load);
             this.ResumeLayout(false);
 
         }
